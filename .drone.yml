@@ -1,0 +1,16 @@
+---
+name: default
+kind: pipeline
+type: docker
+
+steps:
+- name: publish
+  image: plugins/docker
+  pull: always
+  settings:
+    repo: kit101z/docker-compose
+    auto_tag: true
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
