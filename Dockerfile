@@ -1,4 +1,4 @@
-FROM docker:dind
+FROM plugins/docker
 
 # LABEL author=kit101<qkssk1711@163.com>
 
@@ -8,5 +8,5 @@ RUN apk add docker-compose
 RUN apk cache clean; rm -rf /var/cache/apk/*
 
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/dockerd-entrypoint.sh"]
 CMD []
