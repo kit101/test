@@ -8,7 +8,7 @@ steps:
   image: plugins/docker
   pull: always
   settings:
-    repo: kit101z/docker-compose
+    repo: kit101z/test
     auto_tag: true
     username:
       from_secret: docker_username
